@@ -39,7 +39,7 @@ const createRichText = async (data) => {
       // Make sure we only operate on the custom anchor-to-reference tag.
       if (element.tagName === "ANCHOR-TO-REFERENCE") {
         // Create entry via Content Management API (assumes a content type "test" exists).
-        // TODO: It would probably be good to add additonal checks for existing entries.
+        // TODO: It would probably be good to add additional checks for existing entries.
         const entry = await environment.createEntry("test", {
           fields: {
             title: {
