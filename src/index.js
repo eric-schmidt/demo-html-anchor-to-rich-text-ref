@@ -38,7 +38,7 @@ const createRichText = async (data) => {
 
       // Make sure we only operate on the custom anchor-to-reference tag.
       if (element.tagName === "ANCHOR-TO-REFERENCE") {
-        // Create entry via Content Management API.
+        // Create entry via Content Management API (assumes a content type "test" exists).
         const entry = await environment.createEntry("test", {
           fields: {
             title: {
@@ -63,7 +63,7 @@ const createRichText = async (data) => {
   return richText;
 };
 
-// Utility function for returning a properly-formatted Contentful Rich Text block reference.
+// Utility function for returning a properly-formatted Contentful Rich Text inline reference.
 const createEmbeddedEntryInline = (id) => {
   return {
     nodeType: "embedded-entry-inline",
