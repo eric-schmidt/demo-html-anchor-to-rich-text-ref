@@ -6,5 +6,5 @@ This repo provides a simplified example for how one can leverage [Turndown](http
 
 1. Copy the `.env.example` file and rename it to `.env`.
 2. Populate the `CONTENTFUL_SPACE_ID`, `CONTENTFUL_ENVIRONMENT_ID`, and `CONTENTFUL_CMA_TOKEN` with those from your Contentful Space.
-3. Add a content type to your space with a Content Type ID of `test`.
+3. Add a content type to your space with a Content Type ID of `test`, as well as two Short Text fields (`title` and `slug`).
 4. Run `node src/index.js`, which will run the script that analyzes an HTML string, creates a referenceable entry, and then returns valid Rich Text JSON that includes and inline entry reference.
